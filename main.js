@@ -6,9 +6,8 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 const loader = new GLTFLoader();
-
-const renderer = new THREE.WebGLRenderer();
-renderer.setSize( window.innerWidth, window.innerHeight );
+const renderer = new THREE.WebGLRenderer({ antialias: true });
+renderer.setSize
 document.body.appendChild( renderer.domElement );
 
 // load model
@@ -18,6 +17,13 @@ loader.load('fish.glb', function (gltf) {
 	console.error(error);
 }
 );
+
+// make responsive
+window.addEventListener('resize', function () {
+	renderer.setSize(window.innerWidth, window.innerHeight);
+	camera.aspect = window.innerWidth / window.innerHeight;
+	camera.updateProjectionMatrix();
+});
 
 // animate	model spinning
 function animateModel() {
