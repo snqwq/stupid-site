@@ -1,6 +1,6 @@
 // imports
-import * as THREE from 'https://unpkg.com/three@160/build/three.module.js';
-import { GLTFLoader } from 'https://unpkg.com/three@0.127.0/examples/jsm/loaders/GLTFLoader.js';
+import * as THREE from 'three';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
 // variables
 const scene = new THREE.Scene();
