@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #ipadd {
+            color: transparent;
+            display: inline-block;
+            background-color: white;
+            transition: all 0.5s ease-in-out;
+        }
+        #ipadd:hover {
+            color: white;
+            background-color: transparent;
+            transition: all 0.5s ease-in-out;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="location">location</h1>
+    <p id="ipadd">ip</p>
+    <script>
+        const api = "https://api.country.is/";
+        let regionNames = new Intl.DisplayNames(['en'], {type: 'region'});
+        const locText = document.getElementById("location");
+        const ipText = document.getElementById("ipadd");
+
+
+        // Fetching the location using the provided API
+        fetch(api)
+
+            .then(response => response.json())
+            .then(data => {
+                const country = data.country;
+
+                // Updating the location element with the fetched location
+                locText.textContent = "You are in " + regionNames.of(country);
+                ipText.textContent = data.ip;
+
+            })
+            .catch(error => {
+
+                console.error('Error fetching location:', error, ' :(');
+                locText.textContent = "You are in Unknown :("; // If there's an error, display "Unknown" as the location
+
+            });
+    </script>
+</body>
+</html>
