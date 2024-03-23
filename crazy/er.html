@@ -21,6 +21,13 @@
   </head>
   <body>
     <script type="module" src="./main.js"></script>
-    <audio id="audio" src="./blurged.mp3" autoplay loop></audio>
+    <script>
+        // Get a reference to the audio element
+        const audio = new Audio("./blurged.mp3");
+        // Set the loop attribute to true for looping
+        audio.loop = true;
+        // Play the background music
+        audio.play();
+    </script>
   </body>
 </html>
