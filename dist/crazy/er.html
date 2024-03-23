@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>gorbo</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+    </style>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <script type="module" src="./main.js"></script>
+    <script>
+        // Get a reference to the audio element
+        const audio = new Audio("./blurged.mp3");
+        // Set the loop attribute to true for looping
+        audio.loop = true;
+        // Play the background music
+        audio.play();
+    </script>
+  </body>
+</html>
