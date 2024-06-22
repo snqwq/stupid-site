@@ -6,6 +6,14 @@
 
   /* fonts */
   --main-font-family: "Roboto", sans-serif;
+
+  /* the gays */
+  --pride-0: #e50000;
+  --pride-1: #e68d00;
+  --pride-2: #e6d600;
+  --pride-3: #008100;
+  --pride-4: #004cff;
+  --pride-5: #760188;
 }
 
 /* global styles */
@@ -13,6 +21,11 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);
   font-family: var(--main-font-family);
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
 }
 
 canvas {
@@ -34,6 +47,8 @@ a:hover {
 /* specific styles */
 
 #page-title {
+  display: inline-block;
+
   background: linear-gradient(90deg, blueviolet, #ff00ff);
   -webkit-background-clip: text;
   background-clip: text;
@@ -41,4 +56,30 @@ a:hover {
 
   font-size: 4rem;
   font-weight: 700;
+
+  margin: 0;
+  margin-top: 1rem;
+}
+
+#gay-title {
+  display: inline-block;
+
+  background: linear-gradient(
+    90deg,
+    var(--pride-0),
+    var(--pride-1),
+    var(--pride-2),
+    var(--pride-3),
+    var(--pride-4),
+    var(--pride-5)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  font-size: 4rem;
+  font-weight: 700;
+
+  margin: 0;
+  margin-top: 1rem;
 }
