@@ -50,6 +50,7 @@ a:hover {
   display: inline-block;
 
   background: linear-gradient(90deg, blueviolet, #ff00ff);
+
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -73,6 +74,7 @@ a:hover {
     var(--pride-4),
     var(--pride-5)
   );
+
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
